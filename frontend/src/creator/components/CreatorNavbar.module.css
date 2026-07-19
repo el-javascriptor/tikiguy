@@ -1,0 +1,34 @@
+.navContainer {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--bg-medium);
+  padding: 0.25rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.tabBtn {
+  background: transparent;
+  color: var(--text-secondary);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition-smooth);
+}
+
+.tabBtn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tabBtnActive {
+  background: var(--primary);
+  color: #fff !important;
+  box-shadow: 0 2px 4px var(--primary-glow);
+}

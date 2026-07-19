@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Warm Light Sandstone/Brick Theme Color Palette */
+  --bg-darker: #ebdccb;      /* Main Background: Light dry sandstone brick */
+  --bg-dark: #fcfaf7;        /* Panel Background: Clean warm off-white */
+  --bg-medium: #f2eade;      /* Element Background: Warm concrete */
+  --bg-light: #e5d8c6;       /* Focus/Borders secondary */
+  
+  --primary: #27ae60;        /* Deep Jungle Green */
+  --primary-glow: rgba(39, 174, 96, 0.15);
+  --accent: #d4af37;         /* Aztec Gold */
+  --accent-glow: rgba(212, 175, 55, 0.2);
+  --volcan: #c0392b;         /* Volcan Lava Red */
+  --brick: #caa371;          /* Dry Pyramid Stone */
+  --brick-glow: rgba(202, 163, 113, 0.15);
+  
+  --text-primary: #212b2e;   /* Obsidian Dark Charcoal for text */
+  --text-secondary: #5d6d7e; /* Slate gray for secondary text */
+  --text-muted: #85929e;     /* Muted gray */
+  
+  --border-color: #d5c8b7;   /* Sandy mortar */
+  --border-glow: rgba(39, 174, 96, 0.08);
+  --border-radius: 8px;
+  
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset & Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-darker);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom premium scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-light);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

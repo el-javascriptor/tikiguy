@@ -1,0 +1,236 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.title {
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.createForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex-grow: 1;
+  min-width: 200px;
+}
+
+.label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.input {
+  padding: 0.5rem;
+  background: var(--bg-medium);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  outline: none;
+  font-family: inherit;
+  transition: var(--transition-smooth);
+}
+
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px var(--primary-glow);
+}
+
+.btnPrimary {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.53rem 1.25rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px var(--primary-glow);
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btnPrimary:hover:not(:disabled) {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+.btnPrimary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Room Catalog Grid */
+.roomGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.roomCard {
+  background: var(--bg-medium);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.roomCard:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+.roomHeader {
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.roomTitle {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: bold;
+  display: block;
+}
+
+.roomId {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.roomDetails {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.actionsRow {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.btnEdit {
+  flex-grow: 1;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3;
+}
+
+.btnEdit:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: rgba(46, 204, 113, 0.04);
+}
+
+.btnDelete {
+  background: rgba(192, 57, 43, 0.12);
+  border: 1px solid var(--volcan);
+  color: var(--volcan);
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: var(--transition-smooth);
+}
+
+.btnDelete:hover {
+  background: var(--volcan);
+  color: #fff;
+}
+
+/* Floating Editor Layout Grid */
+.editorWrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 180px); /* Expands to cover full page height! */
+  min-height: 500px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.floatingToolbar {
+  position: absolute;
+  top: 12px;
+  left: 264px; /* Sits to the right of the sidebar (240px width + 12px margin + 12px gap) */
+  right: 12px;
+  z-index: 10;
+  background: rgba(252, 250, 247, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.floatingSidebar {
+  position: absolute;
+  top: 12px; /* Aligns all the way to the top! */
+  left: 12px;
+  bottom: 12px;
+  width: 240px;
+  z-index: 10;
+  background: rgba(252, 250, 247, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.25rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+}
+
+.canvasContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}

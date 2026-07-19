@@ -1,0 +1,66 @@
+[
+    {
+        "id": "jungle_platform_01",
+        "name": "Jungle Platform 01",
+        "imagePath": "/static/uploads/Video_Game_Blocks__Inside_Pyramid_5_5.png",
+        "sprite": {
+            "x": 103,
+            "y": 73,
+            "width": 433,
+            "height": 163
+        },
+        "hitbox": {
+            "xOffset": 0,
+            "yOffset": 0,
+            "width": 192,
+            "height": 64
+        },
+        "render": {
+            "scale": 0.42,
+            "offsetX": 5.42,
+            "offsetY": -1.77
+        },
+        "gridWidth": 3,
+        "gridHeight": 1,
+        "anchorX": 0,
+        "anchorY": 0,
+        "properties": {
+            "isSolid": true,
+            "isHazard": false,
+            "isLadder": false,
+            "isDestructible": false
+        }
+    },
+    {
+        "id": "jungle_grass_top",
+        "name": "Jungle Grass Top",
+        "imagePath": "/static/uploads/Video_Game_Blocks__Inside_Pyramid_5_6.png",
+        "sprite": {
+            "x": 560,
+            "y": 44,
+            "width": 205,
+            "height": 216
+        },
+        "hitbox": {
+            "xOffset": 0,
+            "yOffset": 0,
+            "width": 64,
+            "height": 64
+        },
+        "render": {
+            "scale": 0.38,
+            "offsetX": -8.68,
+            "offsetY": -15.61
+        },
+        "gridWidth": 1,
+        "gridHeight": 1,
+        "anchorX": 0,
+        "anchorY": 0,
+        "properties": {
+            "isSolid": true,
+            "isHazard": false,
+            "isLadder": false,
+            "isDestructible": false
+        }
+    }
+]

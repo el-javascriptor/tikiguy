@@ -1,0 +1,210 @@
+.editorWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statusText {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.btnNext {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px var(--primary-glow);
+  transition: var(--transition-smooth);
+}
+
+.btnNext:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 12px var(--primary-glow);
+}
+
+.btnBack {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btnBack:hover {
+  background: var(--bg-medium);
+  color: var(--text-primary);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  background: var(--bg-dark);
+  padding: 0.75rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+.btnGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btnMode {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btnModeActiveSprite {
+  background: var(--primary);
+  color: #fff !important;
+}
+
+.btnModeActiveHitbox {
+  background: var(--volcan);
+  color: #fff !important;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.select {
+  background: var(--bg-medium);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.divider {
+  border-left: 1px solid var(--border-color);
+  height: 24px;
+}
+
+/* Viewports */
+.viewportStep1 {
+  position: relative;
+  overflow: auto;
+  max-height: 400px;
+  background: #070a0b;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  cursor: crosshair;
+}
+
+.viewportStep2 {
+  position: relative;
+  height: 384px;
+  background-color: var(--bg-medium);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.gridOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Crop bounding box step 1 */
+.cropBox {
+  position: absolute;
+  border: 2px solid var(--accent);
+  background: rgba(241, 196, 15, 0.1);
+  pointer-events: none;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.cropLabel {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  font-size: 0.65rem;
+  background: var(--accent);
+  color: #000;
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
+/* Draggable elements step 2 */
+.visualSpriteContainer {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+}
+
+.visualSprite {
+  position: absolute;
+  max-width: none;
+  user-select: none;
+}
+
+.hitboxOverlay {
+  position: absolute;
+  border: 2px solid var(--volcan);
+  background: rgba(231, 76, 60, 0.12);
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hitboxLabel {
+  font-size: 0.7rem;
+  color: #fff;
+  background: var(--volcan);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.resizeIndicator {
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.infoText {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}

@@ -2,26 +2,31 @@
 
 ## Phase 1: Environment Setup
 - [x] Scaffold project directory structure (folders & empty file stubs)
-- [ ] Define backend configuration (`requirements.txt`)
-- [ ] Define frontend configuration (`package.json`, `tsconfig.json`, `vite.config.ts`)
-- [ ] Establish initial global CSS custom properties and resets (`src/index.css`)
+- [x] Define backend configuration (`requirements.txt`)
+- [x] Define frontend configuration (`package.json`, `tsconfig.json`, `vite.config.ts`)
+- [x] Establish initial global CSS custom properties and resets (`src/index.css`)
 
 ## Phase 2: Asset Upload & Bounding Box Configurations (Dev Portal)
-- [ ] Set up basic Multi-Page App entry point for Creator Dev (`creator.html`, `src/creator-main.tsx`)
-- [ ] Implement backend asset upload endpoint (`backend/app.py` for uploading files to `static/` and saving registry JSON)
-- [ ] Build front-end Asset Upload Portal (`src/creator/AssetPortal.tsx`)
-  - [ ] Drag-and-drop file upload to Flask server
-  - [ ] Visual canvas selector to draw collision bounding boxes (hitboxes) and sprite anchors on the uploaded spritesheet
-  - [ ] Define custom properties for assets (e.g., solid, hazard, ladder, destructible, background-decoration)
-  - [ ] Save configurations to backend asset registry
+- [x] Set up basic Multi-Page App entry point for Creator Dev (`creator.html`, `src/creator-main.tsx` mapped to `src/creator/main.tsx`)
+- [x] Implement backend asset upload endpoint (`backend/app.py` for uploading files to `static/` and saving registry JSON)
+- [x] Build front-end Asset Upload Portal (`src/creator/AssetPortal.tsx`)
+  - [x] Drag-and-drop file upload to Flask server
+  - [x] Visual canvas selector to draw collision bounding boxes (hitboxes) and sprite anchors on the uploaded spritesheet
+  - [x] Define custom properties for assets (e.g., solid, hazard, ladder, destructible, background-decoration)
+  - [x] Save configurations to backend asset registry
 
 ## Phase 3: Primitive Area Creator (Dev Portal)
-- [ ] Build the Area Creator canvas/grid layout editor (`src/creator/AreaCreator.tsx`)
-  - [ ] Load assets from the asset registry
-  - [ ] Brush tool to paint assets on a customizable grid (rows/cols)
-  - [ ] Set start location for Tikiguy (Player Spawn)
-  - [ ] Placement of solid tiles, hazard tiles, portal/doors, and enemy spawns
-- [ ] Connect save/load API routes (`backend/app.py`) for area layout files (JSON format)
+- [x] Build the Area Creator canvas/grid layout editor (`src/creator/AreaCreator.tsx`)
+  - [x] Load assets from the asset registry
+  - [x] Brush tool to paint assets on a customizable grid (rows/cols)
+  - [x] Set start location for Tikiguy (Player Spawn)
+  - [x] Placement of solid tiles, hazard tiles, portal/doors, and enemy spawns
+- [x] Connect save/load API routes (`backend/app.py`) for area layout files (JSON format)
+
+## Next Action Items (Pre-Phase 4 Auditing & Testing)
+- [ ] Spawn a critique agent to scan code for modularity, quality, and hidden bugs
+- [ ] Manually test the new HTML5 canvas level editor and save layout files in multiple scenarios
+- [ ] Fix unnecessary directories (discuss)
 
 ## Phase 4: Primitive Game Engine (Playground)
 - [ ] Set up Game Portal entry point (`index.html`, `src/main.tsx`)

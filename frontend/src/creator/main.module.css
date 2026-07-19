@@ -1,0 +1,39 @@
+.appContainer {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.title {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary-glow);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+}
+
+.pipelineBadge {
+  padding: 0.5rem 1rem;
+  background: var(--bg-medium);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
