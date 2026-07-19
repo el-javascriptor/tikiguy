@@ -27,6 +27,7 @@
 - [ ] Spawn a critique agent to scan code for modularity, quality, and hidden bugs
 - [ ] Manually test the new HTML5 canvas level editor and save layout files in multiple scenarios
 - [ ] Fix unnecessary directories (discuss)
+- [ ] Update explanation.md files
 
 ## Phase 4: Primitive Game Engine (Playground)
 - [ ] Set up Game Portal entry point (`index.html`, `src/main.tsx`)
