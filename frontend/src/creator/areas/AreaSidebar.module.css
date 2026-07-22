@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.toolGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.toolBtn {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-medium);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: var(--transition-smooth);
+}
+
+.toolBtn:hover {
+  background: var(--bg-light);
+}
+
+.toolBtnActiveBrush {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.toolBtnActiveBrush:hover {
+  background: var(--primary);
+}
+
+.toolBtnActiveSelect {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
+}
+
+.toolBtnActiveSelect:hover {
+  background: var(--primary);
+}
+
+.toolBtnActiveEraser {
+  border-color: var(--volcan);
+  background: rgba(192, 57, 43, 0.12);
+  color: var(--volcan);
+}
+
+.toolBtnActiveEraser:hover {
+  background: rgba(192, 57, 43, 0.2);
+}
+
+.toolBtnActiveSpawn {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #000;
+}
+
+.toolBtnActiveSpawn:hover {
+  background: var(--accent);
+}
+
+.paletteGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: 0.4rem;
+  max-height: 300px;
+  overflow-y: auto;
+  background: var(--bg-medium);
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+}
+
+.assetBtn {
+  width: 100%;
+  height: 64px;
+  background: transparent; /* Fix the black background issue */
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.assetBtn:hover {
+  background: rgba(39, 174, 96, 0.08); /* soft hover outline/glow */
+  border-color: var(--primary);
+}
+
+.assetBtnSelected {
+  background: var(--bg-light);
+  border: 2px solid var(--primary);
+}
+
+.assetBtnSelected:hover {
+  background: var(--bg-light);
+  border-color: var(--primary);
+}

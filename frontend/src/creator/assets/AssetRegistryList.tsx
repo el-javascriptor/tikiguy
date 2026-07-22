@@ -23,15 +23,36 @@ export const AssetRegistryList: React.FC<AssetRegistryListProps> = ({ registry, 
           <div>
             {/* Spritesheet preview crop */}
             <div className={styles.imageContainer}>
-              <div
-                className={styles.imagePreview}
-                style={{
-                  backgroundImage: `url(${asset.imagePath})`,
-                  backgroundPosition: `-${asset.sprite.x}px -${asset.sprite.y}px`,
-                  width: `${asset.sprite.width}px`,
-                  height: `${asset.sprite.height}px`,
-                }}
-              />
+              {(() => {
+                // Fit container bounds (max width ~160px, max height ~90px) with aspect ratio preserved
+                const scale = Math.min(4.0, 160 / asset.sprite.width, 90 / asset.sprite.height);
+                const w = asset.sprite.width * scale;
+                const h = asset.sprite.height * scale;
+                return (
+                  <div style={{
+                    width: `${w}px`,
+                    height: `${h}px`,
+                    position: 'relative',
+                    overflow: 'hidden'
+                  }}>
+                    <div
+                      className={styles.imagePreview}
+                      style={{
+                        position: 'absolute',
+                        left: '50%',
+                        top: '50%',
+                        backgroundImage: `url(${asset.imagePath})`,
+                        backgroundPosition: `-${asset.sprite.x}px -${asset.sprite.y}px`,
+                        width: `${asset.sprite.width}px`,
+                        height: `${asset.sprite.height}px`,
+                        transform: `translate(-50%, -50%) scale(${scale})`,
+                        transformOrigin: 'center center',
+                        imageRendering: 'pixelated'
+                      }}
+                    />
+                  </div>
+                );
+              })()}
             </div>
 
             {/* Flex Header: title/ID and delete button */}

@@ -55,6 +55,10 @@
   gap: 2rem;
 }
 
+.configBody > div {
+  min-width: 0;
+}
+
 @media (max-width: 900px) {
   .configBody {
     grid-template-columns: 1fr;

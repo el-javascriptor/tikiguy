@@ -243,8 +243,8 @@ export const AreaGrid: React.FC<AreaGridProps> = ({
       setIsPainting(true);
       eraseCell(world.x, world.y, hitboxSnap);
     } else if (activeTool === 'spawn') {
-      const snapX = hitboxSnap ? Math.round(world.x / GRID_SIZE) * GRID_SIZE : Math.round(world.x);
-      const snapY = hitboxSnap ? Math.round(world.y / GRID_SIZE) * GRID_SIZE : Math.round(world.y);
+      const snapX = hitboxSnap ? (Math.floor(world.x / GRID_SIZE) + 0.5) * GRID_SIZE : Math.round(world.x);
+      const snapY = hitboxSnap ? (Math.floor(world.y / GRID_SIZE) + 0.5) * GRID_SIZE : Math.round(world.y);
       onAreaChange({
         ...activeArea,
         playerSpawn: { x: snapX, y: snapY }

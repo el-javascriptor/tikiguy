@@ -227,8 +227,14 @@ export const AreaPortal: React.FC = () => {
                       <span className={styles.roomId}>ID: {room.id}</span>
                     </div>
                     <div className={styles.roomDetails}>
-                      <span>📐 Grid Matrix: {room.gridCols} × {room.gridRows} cells</span>
-                      <span>🧱 Placed Blocks: {room.instancesCount}</span>
+                      <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                        <span className="material-symbols-rounded" style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>square_foot</span>
+                        <span>Grid Matrix: {room.gridCols} × {room.gridRows} cells</span>
+                      </span>
+                      <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                        <span className="material-symbols-rounded" style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>widgets</span>
+                        <span>Placed Blocks: {room.instancesCount}</span>
+                      </span>
                     </div>
                     <div className={styles.actionsRow}>
                       <button

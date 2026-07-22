@@ -27,8 +27,9 @@ function CreatorApp() {
           onTabChange={setActiveTab} 
         />
 
-        <div className={styles.pipelineBadge}>
-          🛠️ SYSTEM ONLINE
+        <div className={styles.pipelineBadge} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+          <span className="material-symbols-rounded" style={{ fontSize: '1.1rem', color: 'var(--primary)' }}>sensors</span>
+          <span>SYSTEM ONLINE</span>
         </div>
       </header>
       

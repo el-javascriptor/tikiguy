@@ -2,6 +2,8 @@
 
 This file contains design notes, decisions, and documentation for features under active development.
 
+---
+
 ## Completed: Phase 2 Asset Pipeline
 
 We have established a robust, modular asset upload and configuration dashboard:
@@ -27,9 +29,24 @@ We have built a fully interactive level designer portal:
 
 ---
 
-## Active Phase 4: Primitive Game Engine (Playground)
+## Completed: Phase 4 Primitive Game Engine (Playground)
 
-The goal of Phase 4 is to build the core game loop, load layout JSONs, and render Tikiguy:
-*   **Game Loop**: Scaffolding the basic requestAnimationFrame rendering tick.
-*   **Map Rendering**: Parse room JSON layouts and draw blocks on the gameplay canvas utilizing the shared `drawAssetInstance` drawing engine.
-*   **Tikiguy Entity**: Load Tikiguy's sprite sheets, apply keyboard inputs (WASD), and move the sprite around.
+We have established the core game loop, play dashboard portal, and player rendering systems:
+*   **Game Portal Dashboard**: Replaced the play entry page (`index.html`) with a landing dashboard (`src/main.tsx`) showing control key bindings, fetching all custom designed rooms from Flask via `/api/areas`, and introducing tabbed navigation controls.
+*   **Vanilla TS Loop**: Developed `GameLoop.ts` managing `requestAnimationFrame` timing loops and delta frame times (capped at `0.1s` to ensure physics stability).
+*   **Detachable Keyboard Controls**: Coded `Input.ts` binding key event listeners, mouse click triggers (with dart shooting latch switches), and window scroll locks.
+*   **Clamped Follow Camera**: Developed `Camera.ts` centering viewport coordinate offsets on the player, clamped dynamically to active block bounds and player spawn boundaries so the camera doesn't scroll into black grid areas.
+*   **Smooth High-Res Scaling**: Sized the player sprite (`tikiguy.png`) proportionally based on its original aspect ratio (scaling height to a `64px` width) and enabled bilinear image smoothing (`imageSmoothingEnabled = true`) specifically for the player draw cycle so it looks smooth and clean, while block tiles remain pixelated.
+*   **Drawing Order Layering**: Shifted the player draw cycle inside the camera-translated viewport exactly between the background layers and the gameplay layer. This allows foreground edges (such as grass tufts or rocks) to render *over* the player's feet.
+
+---
+
+## Active Phase 5: Physics & Collision (Metroidvania Core)
+
+The next step is to introduce standard platformer physics, gravity calculations, and solid collision checks:
+*   **AABB Collision Checks**: Program `Physics.ts` to compute Axis-Aligned Bounding Box (AABB) checks.
+*   **Split-Axis Collision Resolution**: Resolve velocity on the horizontal axis (moving player and pushing back on wall overlap) first, then resolve velocity on the vertical axis (moving player, snapping to floor/ceiling, and updating grounded flags). This avoids diagonal clipping glitches.
+*   **Gravity & Terminal Velocity**: Pull players downwards using central configurations in `settings.json` and clamp to falling thresholds.
+*   **Platform Jump Controls**: Add jump physics inputs, check surface landing states, and toggle player animations.
+*   **Climbable Ladders**: Override gravity and horizontal collisions when overlapping a ladder tile and holding climb controls.
+*   **Blowpipe Projectiles**: Enable projectile dart physics with gravity decay curves checking collision checks against solid tiles and enemy hitboxes.

@@ -24,17 +24,22 @@
 - [x] Connect save/load API routes (`backend/app.py`) for area layout files (JSON format)
 
 ## Next Action Items (Pre-Phase 4 Auditing & Testing)
-- [ ] Spawn a critique agent to scan code for modularity, quality, and hidden bugs
-- [ ] Manually test the new HTML5 canvas level editor and save layout files in multiple scenarios
-- [ ] Fix unnecessary directories (discuss)
-- [ ] Update explanation.md files
+- [x] Spawn a critique agent to scan code for modularity, quality, and hidden bugs
+- [x] Manually test the new HTML5 canvas level editor and save layout files in multiple scenarios
+- [x] Clean up redundant directory structure (`frontend/frontend/` and `creator-main.tsx`)
+- [x] Refactor inline styles in `AreaToolbar.tsx` and `AreaSidebar.tsx` into CSS Modules (Style Isolation)
+- [x] Fix player spawn snapping to center of grid cells in `AreaGrid.tsx`
+- [x] Fix unselected asset background color in sidebar palette
+- [x] Fix 'Configure New Asset' overflow in Asset Pipeline
+- [x] Fix card image clipping in Asset Library
+- [x] Update explanation.md files
 
 ## Phase 4: Primitive Game Engine (Playground)
-- [ ] Set up Game Portal entry point (`index.html`, `src/main.tsx`)
-- [ ] Build core vanilla TS Game Loop (`src/game/engine/GameLoop.ts`)
-- [ ] Implement basic canvas drawing wrapper (`src/game/GameCanvas.tsx`)
-- [ ] Load and render the current area layout JSON directly onto the canvas
-- [ ] Implement player entity controls (wasd/arrow keys) for basic visual position testing (no physics yet)
+- [x] Set up Game Portal entry point (`index.html`, `src/main.tsx`)
+- [x] Build core vanilla TS Game Loop (`src/game/engine/GameLoop.ts`)
+- [x] Implement basic canvas drawing wrapper (`src/game/GameCanvas.tsx`)
+- [x] Load and render the current area layout JSON directly onto the canvas
+- [x] Implement player entity controls (wasd/arrow keys) for basic visual position testing (no physics yet)
 
 ## Phase 5: Physics & Collision (Metroidvania Core)
 - [ ] Implement standard AABB (Axis-Aligned Bounding Box) collision detection (`src/game/engine/Physics.ts`)

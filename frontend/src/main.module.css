@@ -1,0 +1,256 @@
+.appContainer {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.title {
+  color: var(--primary);
+  text-shadow: 0 0 10px var(--primary-glow);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+}
+
+.badgeGroup {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  background: var(--bg-medium);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.creatorLink {
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition-smooth);
+}
+
+.creatorLink:hover {
+  background: var(--bg-medium);
+  color: var(--text-primary);
+  border-color: var(--primary);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 800px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+.panel {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.panelTitle {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.panelDescription {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.select {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--bg-medium);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px var(--primary-glow);
+}
+
+.btnPlay {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px var(--primary-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: var(--transition-smooth);
+}
+
+.btnPlay:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px var(--primary-glow);
+  filter: brightness(1.1);
+}
+
+.btnPlay:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.controlCard {
+  background: var(--bg-medium);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+}
+
+.controlList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+}
+
+.controlItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.keyCap {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-bottom-width: 3px;
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  min-width: 45px;
+  text-align: center;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.05);
+}
+
+.controlDesc {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.gameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.canvasContainer {
+  background: #000;
+  border: 4px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+.gameToolbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.25rem;
+}
+
+.btnLeave {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--transition-smooth);
+}
+
+.btnLeave:hover {
+  background: var(--bg-medium);
+  color: var(--text-primary);
+}

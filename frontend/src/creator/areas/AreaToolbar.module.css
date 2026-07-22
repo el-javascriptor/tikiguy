@@ -1,0 +1,141 @@
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.85rem;
+}
+
+.roomGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.roomLabel {
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.roomInput {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+  font-family: inherit;
+  outline: none;
+  font-size: 0.85rem;
+  transition: var(--transition-smooth);
+}
+
+.roomInput:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px var(--primary-glow);
+}
+
+.layerGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.layerLabel {
+  color: var(--text-secondary);
+}
+
+.layerSelect {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.35rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.layerSelect:focus {
+  border-color: var(--primary);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.zoomGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.zoomLabel {
+  color: var(--text-secondary);
+}
+
+.zoomBtn {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: var(--transition-smooth);
+}
+
+.zoomBtn:hover {
+  background: var(--bg-medium);
+}
+
+.zoomText {
+  font-weight: bold;
+  width: 35px;
+  text-align: center;
+}
+
+.saveBtn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 4px var(--primary-glow);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--transition-smooth);
+}
+
+.saveBtn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.leaveBtn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: var(--transition-smooth);
+}
+
+.leaveBtn:hover {
+  background: var(--bg-medium);
+  color: var(--text-primary);
+}

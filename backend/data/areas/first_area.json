@@ -1,8 +1,257 @@
 {
-    "id": "first_area",
-    "name": "Entrance Room",
+    "assets": [
+        {
+            "assetId": "jungle_platform_01",
+            "gridX": 1,
+            "gridY": 4,
+            "instanceId": "inst_2n5733f",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_platform_01",
+            "gridX": 4,
+            "gridY": 2,
+            "instanceId": "inst_8lks2y3",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_platform_01",
+            "gridX": 8,
+            "gridY": 0,
+            "instanceId": "inst_m3pwtdv",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 0,
+            "gridY": 6,
+            "instanceId": "inst_08u4zsl",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 1,
+            "gridY": 6,
+            "instanceId": "inst_0fqwal7",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 2,
+            "gridY": 6,
+            "instanceId": "inst_noxmoui",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 3,
+            "gridY": 6,
+            "instanceId": "inst_aufj8yf",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 4,
+            "gridY": 6,
+            "instanceId": "inst_3y1uqwe",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 5,
+            "gridY": 6,
+            "instanceId": "inst_e5p0dph",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 6,
+            "gridY": 6,
+            "instanceId": "inst_opt7zbi",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 7,
+            "gridY": 6,
+            "instanceId": "inst_gzvfzc4",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 8,
+            "gridY": 6,
+            "instanceId": "inst_e7vzj68",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 9,
+            "gridY": 6,
+            "instanceId": "inst_l3agui9",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 10,
+            "gridY": 6,
+            "instanceId": "inst_uefxq05",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 11,
+            "gridY": 6,
+            "instanceId": "inst_0da6d5c",
+            "layer": "gameplay"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 5,
+            "gridY": 4,
+            "instanceId": "inst_azrszwf",
+            "layer": "background_far"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 5,
+            "gridY": 3,
+            "instanceId": "inst_65m6h4n",
+            "layer": "background_far"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 5,
+            "gridY": 2,
+            "instanceId": "inst_2syqicy",
+            "layer": "background_far"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 5,
+            "gridY": 1,
+            "instanceId": "inst_n2a7p2k",
+            "layer": "background_far"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 5,
+            "gridY": 0,
+            "instanceId": "inst_2h0f7s1",
+            "layer": "background_far"
+        },
+        {
+            "assetId": "jungle_grass_top",
+            "gridX": 8.53254246711731,
+            "gridY": 2.5594537258148193,
+            "instanceId": "inst_mbxzl4i",
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_evclo6v",
+            "assetId": "jungle_grass_top",
+            "gridX": 12,
+            "gridY": 7,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_ftr0eo9",
+            "assetId": "jungle_grass_top",
+            "gridX": 13,
+            "gridY": 8,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_7yvbw28",
+            "assetId": "jungle_grass_top",
+            "gridX": 14,
+            "gridY": 9,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_bgrkfm6",
+            "assetId": "jungle_grass_top",
+            "gridX": 15,
+            "gridY": 10,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_zd6s8ff",
+            "assetId": "jungle_grass_top",
+            "gridX": 16,
+            "gridY": 10,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_rgn9i71",
+            "assetId": "jungle_grass_top",
+            "gridX": 17,
+            "gridY": 10,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_6pv4z09",
+            "assetId": "jungle_grass_top",
+            "gridX": 18,
+            "gridY": 10,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_oht6psy",
+            "assetId": "jungle_grass_top",
+            "gridX": 19,
+            "gridY": 10,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_kiuv0vj",
+            "assetId": "jungle_grass_top",
+            "gridX": 20,
+            "gridY": 10,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_s9glq4x",
+            "assetId": "jungle_grass_top",
+            "gridX": 21,
+            "gridY": 10,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_gpgr896",
+            "assetId": "jungle_grass_top",
+            "gridX": 22,
+            "gridY": 10,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_w4ju3ts",
+            "assetId": "jungle_grass_top",
+            "gridX": 23,
+            "gridY": 10,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_5rfbn0x",
+            "assetId": "jungle_platform_01",
+            "gridX": 16,
+            "gridY": 0,
+            "layer": "gameplay"
+        },
+        {
+            "instanceId": "inst_qd6nccp",
+            "assetId": "jungle_platform_01",
+            "gridX": 20,
+            "gridY": 0,
+            "layer": "gameplay"
+        }
+    ],
     "gridCols": 20,
     "gridRows": 15,
-    "playerSpawn": null,
-    "assets": []
+    "id": "first_area",
+    "name": "Entrance Room RENAMED",
+    "playerSpawn": {
+        "x": 800,
+        "y": 160
+    }
 }
